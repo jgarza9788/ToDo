@@ -1,0 +1,14 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "a simple todo app",
+  "main": "index.js",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "author": "Justin Garza",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.8"
+  }
+}

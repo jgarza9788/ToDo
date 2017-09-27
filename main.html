@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Todos</title>
+  </head>
+  <body>
+    <h1>My Todos</h1>
+    <ul id ="ToDos"></ul>
+  </body>
+
+  <!--script-->
+  <script>
+      const electron = require('electron');
+      const {ipcRenderer} = electron;
+
+      ipcRenderer.on('todo:add',(event,todo)=>
+      {
+        //document.querySelector('#result').innerHTML = 'Video is ' + duration + ' seconds';
+
+        console.log (todo);
+
+        var li = document.createElement('li');
+        var text = document.createTextNode(todo);
+        
+
+        li.appendChild(text);
+        document.querySelector('ul').appendChild(li);
+
+      });
+
+
+      ipcRenderer.on('todo:clear',(event)=>
+      {
+        console.log('clear all');
+        document.querySelector('ul').innerHTML = "";
+      });
+    </script>
+</html>

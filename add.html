@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Add new Todo</title>
+  </head>
+  <body>
+    <form>
+      <div>
+      <label>Enter your todo</label>
+      <input autofocus/>
+      </div>
+      <button type="submit">Add</button>
+    </form>
+
+
+    <!--script-->
+    <script>
+        const electron = require('electron');
+        const {ipcRenderer} = electron;
+  
+  
+        document.querySelector('form').addEventListener('submit',(event)=>
+        {
+          event.preventDefault();
+          debugger;
+
+          // const file = document.querySelector('input').files[0];
+          const {value} = document.querySelector('input');
+  
+          ipcRenderer.send('todo:add',value);
+        });
+  
+      </script>
+
+
+  </body>
+</html>
