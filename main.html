@@ -13,6 +13,7 @@
   <script>
       const electron = require('electron');
       const {ipcRenderer} = electron;
+      const list = document.createElement('ul');
 
       ipcRenderer.on('todo:add',(event,todo)=>
       {
@@ -25,7 +26,7 @@
         
 
         li.appendChild(text);
-        document.querySelector('ul').appendChild(li);
+        list.appendChild(li);
 
       });
 
@@ -33,7 +34,7 @@
       ipcRenderer.on('todo:clear',(event)=>
       {
         console.log('clear all');
-        document.querySelector('ul').innerHTML = "";
+        list.innerHTML = "";
       });
     </script>
 </html>

@@ -1,21 +1,18 @@
-VideoInfo
+Todo
 --------------
-An Electron app that reads metadata about video files and displays it.
+A Todo Electron app 
 Version: v0.1
 
-![https://github.com/jgarza9788/videoinfo/blob/master/docs/images/Screenshot_v0.1.png](https://raw.githubusercontent.com/jgarza9788/videoinfo/master/docs/images/Screenshot_v0.1.png)
+**no image yet**
+<!-- ![https://github.com/jgarza9788/videoinfo/blob/master/docs/images/Screenshot_v0.1.png](https://raw.githubusercontent.com/jgarza9788/videoinfo/master/docs/images/Screenshot_v0.1.png) -->
 
 <!-- TOC -->
 
-- [Table of Contents](#table-of-contents)
 - [Requirements](#requirements)
     - [node.js](#nodejs)
     - [npm](#npm)
     - [electron](#electron)
-    - [ffmpeg](#ffmpeg)
 - [Using](#using)
-- [Troubleshooting](#troubleshooting)
-    - [ffmpeg path](#ffmpeg-path)
 
 <!-- /TOC -->
 
@@ -41,10 +38,6 @@ npm --version
 npm install -g electron
 ```
 
-##ffmpeg
->FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.
-
-[Download from Here](https://www.ffmpeg.org/download.html)
 
 
 # Using
@@ -52,19 +45,12 @@ npm install -g electron
 **make sure you have git installed and use this in Terminal/CMD**
 ```
 # Clone this repository
-git clone https://github.com/jgarza9788/videoinfo
+git clone https://github.com/jgarza9788/ToDo
 # Go into the repository
-cd videoinfo
+cd ToDo
 # Install dependencies
 npm install
 # Run the app
 npm start
 ```
 
-# Troubleshooting
-
-## ffmpeg path
-
-In index.js line 37 the path to ffprobe.exe will need to be changed depending on your system and how you installed ffmpeg.
-
-![https://github.com/jgarza9788/videoinfo/blob/master/docs/images/TS_ffmpegPath.png](https://raw.githubusercontent.com/jgarza9788/videoinfo/master/docs/images/TS_ffmpegPath.png)
